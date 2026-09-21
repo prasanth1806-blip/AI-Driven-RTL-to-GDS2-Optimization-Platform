@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python cache/tools
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.*
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Simulation/build artifacts
+sim_build/
+build/
+dist/
+
+# Simulation output
+*.vcd
+*.vvp
+*.fst
+*.wlf
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+*.swp
+*.swo
+
+# Generated EDA files
+*.odb
+*.spef
+*.guide
+
+# Generated reports/logs
+*.log
+
+# Python package artifacts
+*.egg-info/
+
+# Large generated outputs
+results/

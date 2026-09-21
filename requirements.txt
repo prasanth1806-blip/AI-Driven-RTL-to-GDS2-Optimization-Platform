@@ -1,0 +1,31 @@
+# Web server and API
+requests>=2.31
+flask>=3.0
+graphql-core>=3.2
+
+# Dashboard front end. The UI is built in Python with Dash rather than a
+# hand-written HTML template; dash-bootstrap-components supplies the
+# Bootstrap layout components.
+dash>=3.0
+dash-bootstrap-components>=2.0
+
+# Waveform rendering. gtkwave has no command-line image export, so the
+# waveform PNG is drawn from the VCD directly (scripts/vcd_png.py).
+matplotlib>=3.7
+
+# Python testbenches
+cocotb>=1.8
+pytest>=7.0
+
+
+# sqlite3 is in the Python standard library. The previous pin on
+# "sqlite3-binary" was not installable -- no such package exists on PyPI --
+# so `pip install -r requirements.txt` failed outright.
+#
+# External tools are not pip-installable and must be on PATH:
+#   iverilog, vvp   simulation          apt-get install iverilog
+#   verilator       lint gate           apt-get install verilator
+#   yosys           synthesis           apt-get install yosys
+#   graphviz (dot)  RTL schematic       apt-get install graphviz
+#   gtkwave         interactive waves   apt-get install gtkwave
+#   openroad, sta   place & route, STA  make setup-openroad
